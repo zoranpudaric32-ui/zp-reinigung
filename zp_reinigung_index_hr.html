@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>ZP Reinigung – Profesionalno čišćenje Mainz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ZP Reinigung – profesionalne usluge čišćenja stanova, kuća i poslovnih prostora u Mainzu, Wiesbadenu i okolici." />
+  <style>
+    :root {
+      --blue: #2c7adf;
+      --blue-light: #f3f7fc;
+      --yellow: #f2b632;
+      --dark: #222;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      color: var(--dark);
+      background: #ffffff;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 18px;
+      border-bottom: 1px solid #e3e3e3;
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 10;
+    }
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-img {
+      height: 40px; /* ovdje stavi svoj logo (npr. logo-zp.png) */
+    }
+    .logo-text {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    nav a {
+      margin-left: 15px;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+    nav a:hover { color: var(--blue); }
+
+    /* HERO */
+    .hero {
+      background: var(--blue);
+      color: #fff;
+      padding: 60px 18px 80px;
+      text-align: center;
+    }
+    .hero-top-img {
+      max-width: 420px;
+      margin: 0 auto 25px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .hero-top-img img {
+      width: 100%;
+      display: block;
+    }
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.85rem;
+      color: var(--yellow);
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    .hero h1 {
+      font-size: 1.9rem;
+      margin-bottom: 12px;
+    }
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto 20px;
+      font-size: 1rem;
+    }
+    .btn-yellow {
+      display: inline-block;
+      background: var(--yellow);
+      color: #000;
+      padding: 12px 28px;
+      border-radius: 999px;
+      font-weight: 600;
+      margin-top: 5px;
+    }
+
+    /* SEKCIJE */
+    section {
+      padding: 40px 18px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .center { text-align: center; }
+    .section-label {
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      color: var(--blue);
+      letter-spacing: 1px;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+    .section-title {
+      font-size: 1.7rem;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .section-sub {
+      max-width: 650px;
+      margin: 0 auto 15px;
+      text-align: center;
+      color: #555;
+      font-size: 0.98rem;
+    }
+
+    /* O NAMA */
+    .two-cols {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 30px;
+      margin-top: 20px;
+    }
+    .two-cols p { margin-bottom: 8px; }
+    .highlight-box {
+      background: var(--blue-light);
+      border-radius: 12px;
+      padding: 15px;
+      font-size: 0.95rem;
+    }
+
+    /* BENEFITI */
+    .benefits {
+      background: var(--blue-light);
+    }
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+    .benefit-box {
+      text-align: center;
+      padding: 15px;
+    }
+    .benefit-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 10px;
+      font-size: 22px;
+      color: var(--blue);
+    }
+    .benefit-title {
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    /* USLUGE – KARTICE */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .service-card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .service-card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+    }
+    .service-content {
+      padding: 18px;
+    }
+    .service-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .service-desc {
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+    .service-list {
+      font-size: 0.9rem;
+      margin-left: 16px;
+      margin-bottom: 10px;
+    }
+    .btn-more {
+      display: inline-block;
+      margin-top: 4px;
+      background: var(--yellow);
+      padding: 9px 20px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    /* SURADNJA – KORACI */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .step-box {
+      background: #fff;
+      border-radius: 14px;
+      padding: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+    .step-num {
+      display: inline-block;
+      background: var(--blue);
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      margin-bottom: 8px;
+    }
+    .step-title {
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    /* REFERENCE */
+    .testimonial-card {
+      max-width: 650px;
+      margin: 20px auto 0;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      padding: 18px 20px;
+    }
+    .testimonial-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .testimonial-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+    .stars {
+      color: #ffb400;
+      font-size: 0.9rem;
+    }
+
+    /* FAQ */
+    .faq-item {
+      margin-top: 15px;
+    }
+    .faq-q {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    /* KONTAKT BLOK */
+    .contact-block {
+      background: var(--yellow);
+      padding: 40px 18px;
+      margin-top: 40px;
+      color: #000;
+    }
+    .contact-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 30px;
+      margin-top: 20px;
+    }
+    .contact-grid h3 { margin-bottom: 8px; }
+    .contact-grid ul { list-style: none; }
+    .contact-grid li { margin-bottom: 5px; }
+    .contact-item { margin-bottom: 8px; }
+    .icon { margin-right: 6px; }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      padding: 12px;
+      background: #111;
+      color: #eee;
+    }
+
+    @media (max-width: 768px) {
+      .two-cols, .contact-grid { grid-template-columns: 1fr; }
+      .hero { padding: 40px 16px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-wrap">
+    <!-- OVDJE UBACI SVOJ LOGO: npr. logo-zp.png -->
+    <img src="logo-zp.png" alt="ZP Reinigung logo" class="logo-img">
+    <div class="logo-text">ZP Reinigung</div>
+  </div>
+  <nav>
+    <a href="#o-nama">O nama</a>
+    <a href="#usluge">Usluge</a>
+    <a href="#suradnja">Suradnja</a>
+    <a href="#reference">Reference</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-top-img">
+    <!-- velika slika čišćenja (ti zamijeni naziv datoteke) -->
+    <img src="hero-cleaning.jpg" alt="Profesionalno čišćenje">
+  </div>
+  <div class="hero-kicker">Surađujte s nama</div>
+  <h1>Naša predanost vrhunskoj kvaliteti se isplati!</h1>
+  <p>
+    Pouzdano, temeljito i precizno čišćenje stanova, kuća i poslovnih prostora
+    u Mainzu, Wiesbadenu i okolici – uz osobni pristup i jasnu komunikaciju.
+  </p>
+  <a href="#kontakt" class="btn-yellow">Započni projekt</a>
+</section>
+
+<!-- O NAMA -->
+<section id="o-nama">
+  <div class="section-label">O nama</div>
+  <h2 class="section-title">Tko stoji iza ZP Reinigung</h2>
+  <p class="section-sub">
+    ZP Reinigung je mala, fleksibilna tvrtka za čišćenje kojom osobno upravlja vlasnik, Zoran Pudaric.
+    Radimo transparentno, bez skrivenih troškova, i svaki posao pratimo od prvog poziva do završne kontrole.
+  </p>
+
+  <div class="two-cols">
+    <div>
+      <p>
+        Dugogodišnje iskustvo u čišćenju različitih objekata naučilo nas je da je čistoća
+        uvijek pitanje povjerenja. Zato nam je važno:
+      </p>
+      <ul class="service-list">
+        <li>da dolazimo točno u dogovoreno vrijeme,</li>
+        <li>da poštujemo vašu privatnost i prostor,</li>
+        <li>da se držimo dogovorene ponude i cijene,</li>
+        <li>da je vlasnik osobno uključen u rad i komunikaciju.</li>
+      </ul>
+      <p>
+        Radimo s provjerenim sredstvima i opremom, a po potrebi koristimo i ekološki prihvatljive proizvode.
+      </p>
+    </div>
+    <div class="highlight-box">
+      <strong>Naš način rada u kratkim crtama:</strong><br><br>
+      • Kratki telefonski razgovor ili upit e-mailom<br>
+      • Po potrebi obilazak objekta i savjetovanje<br>
+      • Jasna i pisana ponuda bez skrivenih troškova<br>
+      • Izvođenje čišćenja u terminu koji vama odgovara<br>
+      • Završna kontrola i mogućnost korekcija
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITI -->
+<section class="benefits">
+  <div class="section-label">Prednosti</div>
+  <h2 class="section-title">Zašto odabrati ZP Reinigung</h2>
+  <p class="section-sub">
+    Ako tražite partnera koji razmišlja dugoročno, a ne samo za jedan posao, na pravom ste mjestu.
+  </p>
+
+  <div class="benefit-grid">
+    <div class="benefit-box">
+      <div class="benefit-icon">👍</div>
+      <div class="benefit-title">Najviši standardi kvalitete</div>
+      <p>Sve površine provjeravamo dva puta, a po potrebi dolazimo i na dodatne korekcije.</p>
+    </div>
+    <div class="benefit-box">
+      <div class="benefit-icon">⏱</div>
+      <div class="benefit-title">Fleksibilni termini</div>
+      <p>Radimo ujutro, popodne ili navečer – tako da vaš rad ili obiteljski život ne trpe.</p>
+    </div>
+    <div class="benefit-box">
+      <div class="benefit-icon">🤝</div>
+      <div class="benefit-title">Povjerenje i pouzdanost</div>
+      <p>Uvijek imate jednu kontakt osobu – vlasnika. Nema prebacivanja odgovornosti.</p>
+    </div>
+    <div class="benefit-box">
+      <div class="benefit-icon">💶</div>
+      <div class="benefit-title">Transparentne cijene</div>
+      <p>Ponuda je jasna, a sve što je uključeno u cijenu detaljno je objašnjeno prije početka.</p>
+    </div>
+  </div>
+</section>
+
+<!-- USLUGE -->
+<section id="usluge">
+  <div class="section-label">Usluge</div>
+  <h2 class="section-title">Naš profesionalni asortiman usluga čišćenja</h2>
+  <p class="section-sub">
+    Kombiniramo standardna i specijalna čišćenja kako bismo prilagodili uslugu vašim potrebama –
+    bilo da se radi o stambenom prostoru ili poslovnom objektu.
+  </p>
+
+  <div class="services-grid">
+    <!-- UREDI -->
+    <div class="service-card">
+      <img src="service-office.jpg" alt="Čišćenje ureda">
+      <div class="service-content">
+        <div class="service-title">Čišćenje ureda i mjesta rada</div>
+        <p class="service-desc">
+          Održavanje ureda, ordinacija, studija i manjih poslovnih prostora po dogovorenom rasporedu.
+        </p>
+        <ul class="service-list">
+          <li>čišćenje podova i radnih površina,</li>
+          <li>praznjenje koševa i uklanjanje otpada,</li>
+          <li>sanitarije i kuhinjski kutak,</li>
+          <li>zajednički prostori i ulazi.</li>
+        </ul>
+        <a href="#kontakt" class="btn-more">Saznajte više</a>
+      </div>
+    </div>
+
+    <!-- PROZORI -->
+    <div class="service-card">
+      <img src="service-windows.jpg" alt="Čišćenje prozora">
+      <div class="service-content">
+        <div class="service-title">Čišćenje prozora</div>
+        <p class="service-desc">
+          Unutarnje i vanjsko čišćenje prozora, balkonskih vrata i staklenih stijena bez tragova vode.
+        </p>
+        <ul class="service-list">
+          <li>stambeni i poslovni objekti,</li>
+          <li>klasični i krovni prozori,</li>
+          <li>staklene površine i izlozi.</li>
+        </ul>
+        <a href="#kontakt" class="btn-more">Saznajte više</a>
+      </div>
+    </div>
+
+    <!-- STANDARDNO + DUBINSKO -->
+    <div class="service-card">
+      <img src="service-deepclean.jpg" alt="Dubinsko čišćenje">
+      <div class="service-content">
+        <div class="service-title">Standardno i dubinsko čišćenje</div>
+        <p class="service-desc">
+          Za redovno održavanje ili kada je potrebno „generalno“ čišćenje cijelog prostora.
+        </p>
+        <ul class="service-list">
+          <li>usisavanje i pranje podova,</li>
+          <li>brisanje prašine i vrata,</li>
+          <li>temeljito čišćenje kupaonica i kuhinja,</li>
+          <li>fokus na teško dostupne kutove i fuge.</li>
+        </ul>
+        <a href="#kontakt" class="btn-more">Saznajte više</a>
+      </div>
+    </div>
+
+    <!-- NAKON SELIDBE -->
+    <div class="service-card">
+      <img src="service-move.jpg" alt="Čišćenje nakon selidbe">
+      <div class="service-content">
+        <div class="service-title">Čišćenje nakon selidbe i renoviranja</div>
+        <p class="service-desc">
+          Kada stan ili kuća trebaju izgledati „kao novi“ prije primopredaje ili useljenja.
+        </p>
+        <ul class="service-list">
+          <li>uklanjanje građevinske prašine,</li>
+          <li>brisanje boje i tragova silikona gdje je moguće,</li>
+          <li>detaljno čišćenje sanitarija, prozora i kuhinje.</li>
+        </ul>
+        <a href="#kontakt" class="btn-more">Saznajte više</a>
+      </div>
+    </div>
+
+    <!-- STUBIŠTA -->
+    <div class="service-card">
+      <img src="service-stairs.jpg" alt="Čišćenje stubišta">
+      <div class="service-content">
+        <div class="service-title">Čišćenje stubišta</div>
+        <p class="service-desc">
+          Redovno održavanje stubišta i zajedničkih prostora u stambenim zgradama.
+        </p>
+        <ul class="service-list">
+          <li>stepenice, rukohvati i ulaz,</li>
+          <li>staklene površine u hodnicima,</li>
+          <li>po potrebi čišćenje podruma i spremišta.</li>
+        </ul>
+        <a href="#kontakt" class="btn-more">Saznajte više</a>
+      </div>
+    </div>
+
+    <!-- PRIVATNA KUĆANSTVA -->
+    <div class="service-card">
+      <img src="service-house.jpg" alt="Privatna kućanstva">
+      <div class="service-content">
+        <div class="service-title">Privatna kućanstva</div>
+        <p class="service-desc">
+          Tjedna, dvotjedna ili povremena čišćenja stanova i kuća prema vašim navikama.
+        </p>
+        <ul class="service-list">
+          <li>redovno generalno čišćenje,</li>
+          <li>priprema doma za posebne prilike,</li>
+          <li>čišćenje nakon godišnjeg odmora ili gostiju.</li>
+        </ul>
+        <a href="#kontakt" class="btn-more">Saznajte više</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SURADNJA / NAŠA OSNOVA SURADNJE -->
+<section id="suradnja">
+  <div class="section-label">Suradnja</div>
+  <h2 class="section-title">Naša osnova suradnje</h2>
+  <p class="section-sub">
+    Želimo da točno znate što možete očekivati od nas – od prvog razgovora do završetka radova.
+  </p>
+
+  <div class="steps-grid">
+    <div class="step-box">
+      <div class="step-num">Korak 1</div>
+      <div class="step-title">Neobvezujući upit</div>
+      <p>Javite nam se telefonom, WhatsAppom ili e-mailom i ukratko opišite objekt i željenu uslugu.</p>
+    </div>
+    <div class="step-box">
+      <div class="step-num">Korak 2</div>
+      <div class="step-title">Pregled i ponuda</div>
+      <p>Po potrebi dolazimo na lice mjesta, procjenjujemo posao i pripremamo jasnu ponudu s cijenom.</p>
+    </div>
+    <div class="step-box">
+      <div class="step-num">Korak 3</div>
+      <div class="step-title">Izvođenje čišćenja</div>
+      <p>Radimo u terminima koji vama odgovaraju, pritom pazimo na mir i sigurnost u objektu.</p>
+    </div>
+    <div class="step-box">
+      <div class="step-num">Korak 4</div>
+      <div class="step-title">Kontrola kvalitete</div>
+      <p>Zajedno prolazimo kroz prostor. Ako vidite nešto što treba doraditi, rješavamo odmah.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REFERENCE -->
+<section id="reference">
+  <div class="section-label">Reference</div>
+  <h2 class="section-title">Što kažu naši klijenti</h2>
+  <p class="section-sub">
+    U nastavku su primjeri povratnih informacija klijenata koji redovno koriste naše usluge.
+  </p>
+
+  <div class="testimonial-card">
+    <div class="testimonial-header">
+      <div class="testimonial-avatar">M</div>
+      <div>
+        <strong>Marko</strong><br>
+        <span style="font-size:0.85rem;color:#666;">klijent iz Mainza</span>
+      </div>
+    </div>
+    <div class="stars">★★★★★</div>
+    <p style="margin-top:8px;">
+      “Stan je nakon generalnog čišćenja izgledao kao nov. Sve je urađeno tačno prema dogovoru,
+      bez ikakvih skrivenih troškova. Svaka preporuka.”
+    </p>
+  </div>
+
+  <div class="testimonial-card">
+    <div class="testimonial-header">
+      <div class="testimonial-avatar">A</div>
+      <div>
+        <strong>Andreas</strong><br>
+        <span style="font-size:0.85rem;color:#666;">vlasnik malog ureda u Wiesbadenu</span>
+      </div>
+    </div>
+    <div class="stars">★★★★★</div>
+    <p style="margin-top:8px;">
+      “ZP Reinigung održava naš ured već duže vrijeme. Cijenimo pouzdanost i činjenicu da je vlasnik
+      osobno uključen – sve se dogovori brzo i jednostavno.”
+    </p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-label">Česta pitanja</div>
+  <h2 class="section-title">Imate dodatna pitanja?</h2>
+  <p class="section-sub">
+    Ovo su odgovori na najčešće nedoumice. Ako još nešto nije jasno, slobodno nas kontaktirajte.
+  </p>
+
+  <div class="faq-item">
+    <div class="faq-q">Kako se formira cijena čišćenja?</div>
+    <p>Cijena ovisi o veličini prostora, vrsti usluge, učestalosti čišćenja i posebnim zahtjevima.
+       Nakon kratkog razgovora ili obilaska šaljemo vam jasnu ponudu.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Donosite li svoja sredstva i opremu?</div>
+    <p>Da, u pravilu donosimo svoja profesionalna sredstva i opremu. Ako želite da koristimo vaša sredstva,
+       dovoljno je da to naglasite pri dogovoru.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Mogu li dobiti račun za firmu ili privatno?</div>
+    <p>Da, za svaku uslugu izdajemo račun sa svim potrebnim podacima za firmu ili privatnu osobu.</p>
+  </div>
+</section>
+
+<!-- KONTAKT / FOOTER BLOK -->
+<section id="kontakt" class="contact-block">
+  <div class="contact-inner">
+    <h2 class="section-title" style="text-align:left;">Kontakt i radno vrijeme</h2>
+    <p>
+      Najbrže nas možete dobiti putem telefona ili WhatsApp poruke. Odgovaramo i na e-mail u najkraćem mogućem roku.
+    </p>
+
+    <div class="contact-grid">
+      <div>
+        <h3>Usluge čišćenja</h3>
+        <ul>
+          <li>• Čišćenje ureda i mjesta rada</li>
+          <li>• Čišćenje prozora</li>
+          <li>• Standardno i dubinsko čišćenje</li>
+          <li>• Čišćenje nakon selidbe i renoviranja</li>
+          <li>• Čišćenje stubišta</li>
+          <li>• Privatna kućanstva</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Kontakt podaci</h3>
+        <p class="contact-item">
+          <span class="icon">📞</span>
+          <strong>Telefon / WhatsApp:</strong>
+          <a href="tel:+4917681497778">+49 176 8149 7778</a>
+        </p>
+        <p class="contact-item">
+          <span class="icon">✉️</span>
+          <strong>E-mail:</strong>
+          <a href="mailto:zoranpudaric32@gmail.com">zoranpudaric32@gmail.com</a>
+        </p>
+        <p class="contact-item">
+          <span class="icon">📍</span>
+          <strong>Adresa:</strong> Nahestraße 2, 55118 Mainz
+        </p>
+        <p class="contact-item">
+          <span class="icon">⏰</span>
+          <strong>Radno vrijeme:</strong><br>
+          pon–pet 07:00–18:00, subota i nedjelja po dogovoru.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Autorska prava © <span id="year"></span> ZP Reinigung. Sva prava pridržana.
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
